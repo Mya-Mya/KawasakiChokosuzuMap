@@ -7,6 +7,7 @@ features = []
 raw_df = pd.read_json("Data/Raw.json", orient="index")
 coord_df = pd.read_json("Data/Coord.json")
 
+
 for id, r in raw_df.iterrows():
     coord = coord_df[id]
     lat = coord["lat"]
@@ -14,10 +15,6 @@ for id, r in raw_df.iterrows():
     feature = {
         "type": "Feature",
         "properties": {
-            "_markerType": "Icon",
-            "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/076.png",
-            "_iconSize": [20, 20],
-            "_iconAnchor": [10, 10],
             "施設名":r["name"],
             "開放時間":r["time"],
             "休館日":r["close"],
@@ -27,7 +24,6 @@ for id, r in raw_df.iterrows():
             "メモ":r["memo"],
             "ホームページ":r["hp"],
             "連絡先":r["contact"],
-            "タイプ":r["type"],
             "所在地":r["address"],
         },
         "geometry":{
@@ -38,4 +34,4 @@ for id, r in raw_df.iterrows():
     features.append(feature)
 
 geojson_data["features"] = features
-json.dump(geojson_data, Path("Map/かわさきちょこ涼.geojson").open("w"), ensure_ascii=False, indent=1)
+json.dump(geojson_data, Path("Map/Simple.geojson").open("w"), ensure_ascii=False, indent=1)
