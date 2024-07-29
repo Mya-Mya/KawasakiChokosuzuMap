@@ -8,5 +8,7 @@
   - ❌自分の位置情報などと一緒に見ることはできません。
   - ❌操作性がよろしくありません。
 
+- [x] **[GeoJSON Viewer](https://gavinr.github.io/geojson-viewer/?url=https%3A%2F%2Fraw.githubusercontent.com%2FMya-Mya%2FKawasakiChokosuzuMap%2Fmain%2FMap%2FSimple.geojson)**
+
 ### 注意
  川崎市によると、民間施設については令和6年7月1日から募集を開始しているそうです。従って、私のコミット後も施設が増える可能性があります。
