@@ -7,6 +7,8 @@ features = []
 raw_df = pd.read_json("Data/Raw.json", orient="index")
 coord_df = pd.read_json("Data/Coord.json")
 
+def get_type_expr(type:str)->str:
+    return {"Public":"公共施設", "Private":"民間施設"}[type]
 
 for id, r in raw_df.iterrows():
     coord = coord_df[id]
@@ -24,6 +26,7 @@ for id, r in raw_df.iterrows():
             "メモ":r["memo"],
             "ホームページ":r["hp"],
             "連絡先":r["contact"],
+            "タイプ":get_type_expr(r["type"]),
             "所在地":r["address"],
         },
         "geometry":{
