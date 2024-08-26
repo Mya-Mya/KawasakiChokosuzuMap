@@ -19,7 +19,7 @@ def retrieve_raw_data():
     )
     # 民間施設
     urlretrieve(
-        "https://www.city.kawasaki.jp/300/cmsfiles/contents/0000167/167100/M0725.xlsx",
+        "https://www.city.kawasaki.jp/300/cmsfiles/contents/0000167/167100/M0731.xlsx",
         "Data/PrivateRaw.xlsx",
     )
 
