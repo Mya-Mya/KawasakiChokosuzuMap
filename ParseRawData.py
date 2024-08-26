@@ -109,4 +109,9 @@ def prepare_coord_data():
     coord_df.set_index("id", inplace=True)
     coord_df.to_json("Data/Coord.json", orient="index", force_ascii=False, indent=1)
 
+print("Retrieving Raw Data")
+retrieve_raw_data()
+print("Extracting Raw Data")
+extract_raw_data()
+print("Preparing Coord Data")
 prepare_coord_data()
